@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Login • Toko Buku</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body data-page="login">
+  <div class="container">
+    <div class="card">
+      <h1>Masuk ke Aplikasi</h1>
+      <p class="small">Gunakan email & password yang ada di <code>data.js</code>.</p>
+      <form id="loginForm">
+        <div class="row">
+          <div class="col">
+            <label>Email</label>
+            <input id="email" type="email" placeholder="contoh: rina@gmail.com" required/>
+          </div>
+          <div class="col">
+            <label>Password</label>
+            <input id="password" type="password" required/>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col"><button class="btn pri" type="submit">Login</button></div>
+          <div class="col right">
+            <button class="btn" type="button" id="btnForgot">Lupa Password</button>
+            <button class="btn" type="button" id="btnRegister">Daftar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="footer">© 2025 Tugas UTS Pemrograman Web 1</div>
+  </div>
+
+  <!-- Modal Lupa Password -->
+  <div class="modal-backdrop" id="backdropForgot">
+    <div class="modal" id="modalForgot">
+      <h2>Lupa Password</h2>
+      <p>Simulasi: masukkan email Anda, kami akan mengirim tautan reset (dummy).</p>
+      <label>Email</label>
+      <input type="email" placeholder="nama@email.com"/>
+      <div class="row" style="margin-top:10px">
+        <button class="btn ok" type="button">Kirim</button>
+        <button class="btn close-modal" type="button">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Daftar -->
+  <div class="modal-backdrop" id="backdropRegister">
+    <div class="modal" id="modalRegister">
+      <h2>Daftar Akun Baru</h2>
+      <div class="row">
+        <div class="col"><label>Nama</label><input type="text"/></div>
+        <div class="col"><label>Email</label><input type="email"/></div>
+      </div>
+      <div class="row">
+        <div class="col"><label>Password</label><input type="password"/></div>
+        <div class="col"><label>Konfirmasi</label><input type="password"/></div>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn ok" type="button">Daftar</button>
+        <button class="btn close-modal" type="button">Tutup</button>
+      </div>
+      <p class="small">* Pendaftaran ini simulasi front-end.</p>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
